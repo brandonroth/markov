@@ -11,7 +11,7 @@ object markov {
 	    System.exit(-1)
 	  }
 	  
-	  //Parse the input file into tokens (strings) separated by whitespace
+	  //Parse the input file into tokens (strings) separated by whitespace. Scanner is slow but it's nostalgic to use it.
 	  val scanner = new Scanner(io.Source.fromFile(args(0)).mkString.toLowerCase)
 	  val list = new ArrayBuffer[String]
 	  while(scanner.hasNext()){
